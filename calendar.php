@@ -54,10 +54,10 @@
 
 
     ?>
-    // 連續next跟prev的作法
+<div style='width:264px;display:flex;margin:auto;justify-content:space-between'>
 
     <?php
-
+    // 連續next跟prev的作法
     // 變數必須要先宣告，才能進入算式
     $nextYear = $year;
     $prevYear = $year;
@@ -65,8 +65,9 @@
     if (($month + 1) > 12) {
 
         $next = 1;
-        $nextYear = $nextyear + 1;
+        $nextYear = $nextYear + 1;
     } else {
+        // 也就是其餘的1-11月
         $next = $month + 1;
         //    現在的年分$YEAR
         //    $nextYear=$year;
@@ -84,15 +85,15 @@
     ?>
 
 
-    <div style='width:264px;display:flex;margin:auto;justify-content:space-between'>
+    
         <!-- <a href='?prev=9'>上一個月</a>
         <a href='?next=11'>下一個月</a> -->
 
         <!-- 連續next跟prev的作法 -->
 
 
-        <a href='?month=<?= $prev; ?>'>上一個月</a>
-        <a href='?month=<?= $next; ?>'>下一個月</a>
+        <a href='?year=<?=$prevYear;?>&month=<?= $prev; ?>'>上一個月</a>
+        <a href='?year=<?=$nextYear;?>&month=<?= $next; ?>'>下一個月</a>
     </div>
     <table style='width:264px;display:block;margin:auto'>
         <tr>
