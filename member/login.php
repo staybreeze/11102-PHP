@@ -1,3 +1,4 @@
+<?php include_once "session.php";?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -46,9 +47,11 @@
 <body>
 
 <?php
+// 在include中加上流程判斷來決定是否要載入檔案
 
-include_once "header.php";
-
+if(isset($_SESSION['login']) && !empty($_SESSION['login'])){
+    include_once "header.php";
+}
 ?>
 
     <!-- 輸入帳密(LOGIN)->檢查帳密(CHECK)->成功(member)
@@ -57,20 +60,18 @@ include_once "header.php";
     <div class='login-block'>
         <?php
 
-        session_start();
-
-        if (isset($_COOKIE['error'])) {
-            echo "<span style='color:red'>" . $_COOKIE['error'] . "</span>";
 
 
-            unset($_COOKIE['error']);
+        if (isset($_SESSION['error'])) {
+            echo "<span style='color:red'>" . $_SESSION['error'] . "</span>";
+       unset($_SESSION['error']);
+       
         }
 
-        if (isset($_COOKIE['login']) && !empty($_COOKIE['login'])) {
-            echo $_COOKIE['login'] . " welcome!";
-            echo "<br><hr>";
-            echo "<a href='logout.php'>登出<a>";
-        } else {
+        if (isset($_SESSION['login'])&&!empty($_SESSION['login'])){
+            echo $_SESSION['login'] ." welcome!";
+            echo "<a href='logout.php'>登出</a>";
+        }else{
 
 
         ?>
