@@ -51,15 +51,17 @@
     <div class='login-block'>
         <?php
 
-        if (isset($_GET['m'])) {
-            echo "<span style='color:red'>" . $_GET['m'] . "</span>";
+session_start();
+
+        if (isset($_SESSION['error'])) {
+            echo "<span style='color:red'>" . $_SESSION['error'] . "</span>";
         }
 
         // 此判斷式是為了通知LOGIN頁面有關已經成功登入者的訊息，
         // 以便成功登入者再回到LOGIN頁面時，
         // 不會繼續顯示待登入狀態
-        if (isset($_GET['login'])==1){
-            echo "welcome!";
+        if (isset($_SESSION['login'])&&!empty($_SESSION['login'])){
+            echo $_SESSION['login'] ." welcome!";
         }else{
         
         

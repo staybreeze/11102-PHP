@@ -8,16 +8,18 @@
 <body>
     
 <?php
+
+session_start();
 // PHP跟PHP互傳資料不能用POST，所有用GET
-// CHECK頁面已設定login=1作為接口，於此處接收
-if($_GET['login']==1){
+
+if(isset($_SESSION['login'])&&!empty($_SESSION['login'])){
     echo "<h3>登入成功</h3>";
-    echo "<a href='login.php?login=1'>回登入頁<a>";
+    echo "<a href='login.php'>回登入頁<a>";
 }else{
     // 防止有心人士直接打網址偷看
-    echo"沒有登入相關驗證，非法登入";
+    // echo"沒有登入相關驗證，非法登入";
     // 或導往首頁
-    header("location:login.php");
+    // header("location:login.php");
 }
 
 ?>
