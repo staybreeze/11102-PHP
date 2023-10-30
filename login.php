@@ -51,20 +51,22 @@
     <div class='login-block'>
         <?php
 
-session_start();
+        session_start();
 
-        if (isset($_SESSION['error'])) {
-            echo "<span style='color:red'>" . $_SESSION['error'] . "</span>";
+        if (isset($_COOKIE['error'])) {
+            echo "<span style='color:red'>" . $_COOKIE['error'] . "</span>";
+
+
+            unset($_COOKIE['error']);
         }
 
-        // 此判斷式是為了通知LOGIN頁面有關已經成功登入者的訊息，
-        // 以便成功登入者再回到LOGIN頁面時，
-        // 不會繼續顯示待登入狀態
-        if (isset($_SESSION['login'])&&!empty($_SESSION['login'])){
-            echo $_SESSION['login'] ." welcome!";
-        }else{
-        
-        
+        if (isset($_COOKIE['login']) && !empty($_COOKIE['login'])) {
+            echo $_COOKIE['login'] . " welcome!";
+            echo "<br><hr>";
+            echo "<a href='logout.php'>登出<a>";
+        } else {
+
+
         ?>
 
 
@@ -88,7 +90,7 @@ session_start();
             </form>
 
 
-            <?php
+        <?php
         }
 
         ?>

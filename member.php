@@ -9,17 +9,17 @@
     
 <?php
 
-session_start();
+
 // PHP跟PHP互傳資料不能用POST，所有用GET
 
-if(isset($_SESSION['login'])&&!empty($_SESSION['login'])){
+if(isset($_COOKIE['login'])&&!empty($_COOKIE['login'])){
     echo "<h3>登入成功</h3>";
     echo "<a href='login.php'>回登入頁<a>";
+                echo "<br><hr>";
+    echo "<a href='logout.php'>登出<a>";
 }else{
-    // 防止有心人士直接打網址偷看
-    // echo"沒有登入相關驗證，非法登入";
-    // 或導往首頁
-    // header("location:login.php");
+setcookie("error","沒有登入相關驗證，非法登入",time()+5);
+header("location:login.php");
 }
 
 ?>
