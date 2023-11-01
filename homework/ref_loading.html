@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://www.googletagmanager.com/gtag/js?id=UA-135540147-1" integrity="sha384-7e+k+4nwQ4PCmsWviqGAIXPm4nikGBn39AEFirkvvlxvglI24i2rYxC60wQkS334" crossorigin="anonymous"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-135540147-1');
+    </script>
+    <style>
+            .o-loading {
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 9999;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                background-color: #fff;
+                pointer-events: none;
+                transition: opacity 0.3s ease;
+            }
+
+            body.start-animation .o-loading {
+                opacity: 0;
+            }
+
+            .o-loading__icon {
+                position: relative;
+                display: inline-block;
+                box-sizing: border-box;
+                padding: 30px;
+                width: 60px;
+                height: 60px;
+                padding: 0
+            }
+
+            .o-loading__icon-line {
+                position: absolute;
+                top: 50%;
+                width: 60px;
+                height: 1px;
+                background: #000;
+                animation: spin 1.5s infinite ease;
+            }
+
+            .o-loading__icon-line:nth-of-type(2) {
+                animation-delay: 0.1s;
+            }
+
+            .o-loading__icon-line:nth-of-type(3) {
+                animation-delay: 0.2s;
+            }
+
+            @keyframes spin {
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+    </style>
+      <link rel="shortcut icon" type="image/ico" href="https://aade.project.edu.tw/wp-content/themes/twentyseventeen/img/ico/favicon.ico"/>
+</head>
+<body>
+    <div class="o-loading">
+        <div class="o-loading__icon">
+            <div class="o-loading__icon-line"></div>
+            <div class="o-loading__icon-line"></div>
+            <div class="o-loading__icon-line"></div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var articles_data;
+        var gallery_data;
+        var side_data;
+        var check_title_now = '';
+        var template_path = 'https://aade.project.edu.tw/wp-content/themes/twentyseventeen/';
+        var page_type = '';
+        var menu = '{"home":{"title":"6aaW6aCB","check_title":"home","href":"https:\/\/aade.project.edu.tw\/","catlist":""},"webnavigation":{"title":"57ay56uZ5bCO6Ka9","check_title":"webnavigation","href":"https:\/\/aade.project.edu.tw\/webnavigation\/","catlist":""},"life":{"title":"576O5oSf5pel6KqM","check_title":"life","href":"https:\/\/aade.project.edu.tw\/life\/","catlist":[{"title":"5ZyL6Zqb6KuW5aOH","href":"https:\/\/aade.project.edu.tw\/life\/%e5%9c%8b%e9%9a%9b%e8%ab%96%e5%a3%87\/"},{"title":"5bCI6aGM5paH56ug","href":"https:\/\/aade.project.edu.tw\/life\/%e5%b0%88%e9%a1%8c%e6%96%87%e7%ab%a0\/"},{"title":"5Lq654mp5bCI6Kiq","href":"https:\/\/aade.project.edu.tw\/life\/%e4%ba%ba%e7%89%a9%e5%b0%88%e8%a8%aa\/"},{"title":"5rS75YuV5raI5oGv","href":"https:\/\/aade.project.edu.tw\/life\/%e7%be%8e%e6%84%9f%e7%99%bc%e7%94%9f%e4%b8%ad\/"},{"title":"5b2x6Z+z57SA5a+m","href":"https:\/\/aade.project.edu.tw\/life\/%e5%bd%b1%e9%9f%b3%e7%b4%80%e5%af%a6\/"}]},"publish":{"title":"576O5oSf5Ye654mI","check_title":"publish","href":"https:\/\/aade.project.edu.tw\/publish\/","catlist":[{"title":"6KiI55Wr5LuL57S5","href":"https:\/\/aade.project.edu.tw\/publish\/%e8%a8%88%e7%95%ab%e4%bb%8b%e7%b4%b9\/"},{"title":"576O5oSf5pWZ6IKy5o6o5buj5b2x54mH","href":"https:\/\/aade.project.edu.tw\/publish\/%e7%be%8e%e6%84%9f%e6%95%99%e8%82%b2%e6%8e%a8%e5%bb%a3%e5%bd%b1%e7%89%87\/"},{"title":"576O5oSf5pm66IO96Zax6K6A77yN5a6J5aau5paw6IGe","href":"https:\/\/aade.project.edu.tw\/publish\/%e7%be%8e%e6%84%9f%e6%99%ba%e8%83%bd%e9%96%b1%e8%ae%80%ef%bc%8d%e5%ae%89%e5%a6%ae%e6%96%b0%e8%81%9e\/"},{"title":"576O5oSf57e057+S6KqM","href":"https:\/\/aade.project.edu.tw\/publish\/mag\/"},{"title":"576O5oSf6Kqy56iL57SA6YyE55+t54mH","href":"https:\/\/aade.project.edu.tw\/publish\/%e7%be%8e%e6%84%9f%e8%aa%b2%e7%a8%8b%e7%b4%80%e9%8c%84%e7%9f%ad%e7%89%87\/"},{"title":"576O5oSf55Sf5rS75a+m6LiQ5a62","href":"https:\/\/aade.project.edu.tw\/publish\/%e7%be%8e%e6%84%9f%e7%94%9f%e6%b4%bb%e5%af%a6%e8%b8%90%e5%ae%b6\/"},{"title":"576O5oSf5a2457+S5bel5YW3","href":"https:\/\/aade.project.edu.tw\/publish\/learning\/"},{"title":"576O5oSf6Zu75a2Q5pu4","href":"https:\/\/aade.project.edu.tw\/publish\/%e7%be%8e%e6%84%9f%e9%9b%bb%e5%ad%90%e6%9b%b8\/"}]},"example":{"title":"576O5oSf6Kqy56iL","check_title":"example","href":"https:\/\/aade.project.edu.tw\/example\/","catlist":[{"title":"6Imy5b2p","href":"https:\/\/aade.project.edu.tw\/aspect\/color\/"},{"title":"5q+U5L6L","href":"https:\/\/aade.project.edu.tw\/aspect\/proportion\/"},{"title":"6LOq5oSf","href":"https:\/\/aade.project.edu.tw\/aspect\/texture\/"},{"title":"57WQ5qeL","href":"https:\/\/aade.project.edu.tw\/aspect\/structure\/"},{"title":"5qeL5oiQ","href":"https:\/\/aade.project.edu.tw\/aspect\/constitution\/"},{"title":"5qeL6YCg","href":"https:\/\/aade.project.edu.tw\/aspect\/%e6%a7%8b%e9%80%a0\/"},{"title":"57ac5ZCI","href":"https:\/\/aade.project.edu.tw\/aspect\/%e7%b6%9c%e5%90%88\/"}]},"plan":{"title":"6Zec5pa86KiI55Wr","check_title":"plan","href":"https:\/\/aade.project.edu.tw\/plan\/","catlist":{"one":{"title":"5LuA6bq85piv576O5oSf77yf","href":"https:\/\/aade.project.edu.tw\/what_is_aesthetics\/","id":350,"check":"one","catlist":null},"two":{"title":"576O5oSf5pWZ6IKy","href":"https:\/\/aade.project.edu.tw\/aesthetic_education\/","id":351,"check":"two","catlist":null},"eight":{"title":"MTA4LTExMuesrOS6jOacn+ioiOeVqw==","href":"https:\/\/aade.project.edu.tw\/%e7%be%8e%e6%84%9f%e6%95%99%e8%82%b2\/","id":7598,"check":"eight","catlist":[{"title":"MTA4LTExMuesrOS6jOacn+ioiOeVqw==","href":"https:\/\/aade.project.edu.tw\/%e7%be%8e%e6%84%9f%e6%95%99%e8%82%b2\/","id":7598},{"title":"5a6J5aau5paw6IGe","href":"https:\/\/aade.project.edu.tw\/%e5%ae%89%e5%a6%ae%e6%96%b0%e8%81%9e\/","id":7606},{"title":"576O5oSf6auU6amX6Kqy56iL","href":"https:\/\/aade.project.edu.tw\/aesthetic_experience_course\/","id":7605},{"title":"","href":"https:\/\/aade.project.edu.tw\/basic_design\/","id":7604}]},"three":{"title":"MTA1LTEwOOesrOS4gOacn+ioiOeVqw==","href":"https:\/\/aade.project.edu.tw\/aade1\/","id":352,"check":"three","catlist":[{"title":"MTA1LTEwOOesrOS4gOacn+ioiOeVqw==","href":"https:\/\/aade.project.edu.tw\/aade1\/","id":352},{"title":"5Y+D6IiH5qKd5Lu2","href":"https:\/\/aade.project.edu.tw\/promotion2\/","id":812}]},"four":{"title":"576O5oSf6Kqy56iL","href":"https:\/\/aade.project.edu.tw\/goals_of_learning\/","catlist":[{"title":"576O5oSf5a2457+S55uu5qiZ","href":"https:\/\/aade.project.edu.tw\/goals_of_learning\/","id":454},{"title":"576O5oSf5a2457+S6ZqO5q61","href":"https:\/\/aade.project.edu.tw\/%e7%be%8e%e6%84%9f%e8%aa%b2%e7%a8%8b%e5%ad%b8%e7%bf%92%e9%9a%8e%e6%ae%b5%e5%ae%89%e6%8e%92\/","id":455},{"title":"576O5oSf6Kqy56iL6aGe5Z6L","href":"https:\/\/aade.project.edu.tw\/%e7%be%8e%e6%84%9f%e5%ad%b8%e7%bf%92%e9%9a%8e%e6%ae%b5\/","id":456}],"check":"four"},"seven":{"title":"5qeL6Z2i5bel5YW3","href":"https:\/\/aade.project.edu.tw\/%e5%ad%b8%e7%bf%92%e5%b7%a5%e5%85%b7%e8%88%87%e6%a7%8b%e9%9d%a2\/","catlist":[{"title":"576O5oSf5a2457+S5qeL6Z2i","href":"https:\/\/aade.project.edu.tw\/%e5%ad%b8%e7%bf%92%e5%b7%a5%e5%85%b7%e8%88%87%e6%a7%8b%e9%9d%a2\/","id":457},{"title":"576O5oSf5a2457+S5bel5YW3","href":"https:\/\/aade.project.edu.tw\/%e7%be%8e%e6%84%9f%e5%ad%b8%e7%bf%92%e5%b7%a5%e5%85%b7\/","id":786},{"title":"5qeL6Z2i5bel5YW3","href":"https:\/\/aade.project.edu.tw\/tool\/","id":"all"},{"title":"6Imy5b2p","href":"https:\/\/aade.project.edu.tw\/tool\/color-kit\/","id":307},{"title":"5q+U5L6L","href":"https:\/\/aade.project.edu.tw\/tool\/ratio-scale-kit\/","id":309},{"title":"6LOq5oSf","href":"https:\/\/aade.project.edu.tw\/tool\/texture-material-kit\/","id":308},{"title":"57WQ5qeL","href":"https:\/\/aade.project.edu.tw\/tool\/%e7%b5%90%e6%a7%8b\/","id":311},{"title":"5qeL5oiQ","href":"https:\/\/aade.project.edu.tw\/tool\/constitute-kit\/","id":310},{"title":"5qeL6YCg","href":"https:\/\/aade.project.edu.tw\/tool\/structure-kit\/","id":312}],"check":"seven"},"five":{"title":"576O5oSf5ZyY6ZqK","href":"https:\/\/aade.project.edu.tw\/point\/core-team\/","catlist":[{"title":"57WE57mU5p625qeL","href":null,"id":"organization"},{"title":"5qC45b+D6KaP5YqD5aeU5ZOh","href":"https:\/\/aade.project.edu.tw\/point\/%e6%a0%b8%e5%bf%83%e8%a6%8f%e5%8a%83%e5%a7%94%e5%93%a1\/","id":592},{"title":"5YmN5bCO6aCY6Iiq56iu5a2Q5a245qCh","href":"https:\/\/aade.project.edu.tw\/point\/%e5%89%8d%e5%b0%8e%e9%a0%98%e8%88%aa%e7%a8%ae%e5%ad%90%e5%ad%b8%e6%a0%a1\/","id":1618},{"title":"57i96KiI55Wr5ZyY6ZqK","href":"https:\/\/aade.project.edu.tw\/point\/core-team\/","id":239},{"title":"5ZCE5Y2A5Z+65Zyw5aSn5a24","href":"https:\/\/aade.project.edu.tw\/point\/%e5%90%84%e5%8d%80%e5%9f%ba%e5%9c%b0%e5%a4%a7%e5%ad%b8\/","id":582},{"title":"56iu5a2Q77yP56S+576k5pWZ5bir","href":"https:\/\/aade.project.edu.tw\/point\/%e7%be%8e%e6%84%9f%e6%95%99%e5%b8%ab\/","id":240}],"check":"five"},"six":{"title":"5Z+56KiT5bel5L2c","href":"https:\/\/aade.project.edu.tw\/%e6%8e%a8%e5%bb%a3%e5%9f%b9%e8%a8%93%e8%a8%88%e7%95%ab\/","catlist":[{"title":"5o6o5buj5Z+56KiT6KiI55Wr","href":"https:\/\/aade.project.edu.tw\/%e6%8e%a8%e5%bb%a3%e5%9f%b9%e8%a8%93%e8%a8%88%e7%95%ab\/","id":353},{"title":"5YWo6YOo","href":"https:\/\/aade.project.edu.tw\/work\/","id":"all"},{"title":"MTEyLTE=","href":"https:\/\/aade.project.edu.tw\/work\/112-1\/","id":1443},{"title":"MTEwLTE=","href":"https:\/\/aade.project.edu.tw\/work\/110-1\/","id":1048},{"title":"MTA5LTE=","href":"https:\/\/aade.project.edu.tw\/work\/109-1\/","id":1050},{"title":"MTA4LTE=","href":"https:\/\/aade.project.edu.tw\/work\/108-1\/","id":568},{"title":"MTA3LTE=","href":"https:\/\/aade.project.edu.tw\/work\/107-1\/","id":243},{"title":"MTA2LTI=","href":"https:\/\/aade.project.edu.tw\/work\/106-2\/","id":244},{"title":"MTA2LTE=","href":"https:\/\/aade.project.edu.tw\/work\/106-1\/","id":245}],"check":"six"}}},"news":{"title":"5aqS6auU5aCx5bCO","check_title":"news","href":"https:\/\/aade.project.edu.tw\/news\/","catlist":[{"title":"6Zuc6KqM","href":"https:\/\/aade.project.edu.tw\/news\/%e9%9b%9c%e8%aa%8c\/"},{"title":"5aqS6auU6LOH5paZ5Y2A","href":"https:\/\/aade.project.edu.tw\/news\/news-info\/"},{"title":"5paw6IGe","href":"https:\/\/aade.project.edu.tw\/news\/%e6%96%b0%e8%81%9e\/"}]},"partner":{"title":"5ZCI5L2c5aSl5Ly0","check_title":"partner","href":"https:\/\/aade.project.edu.tw\/partner\/","catlist":[{"title":"6KiI55Wr5aSl5Ly0","href":"https:\/\/aade.project.edu.tw\/partner\/%e8%a8%88%e7%95%ab%e5%a4%a5%e4%bc%b4\/"},{"title":"576O5oSf5paH5YyW5LyB5qWt","href":"https:\/\/aade.project.edu.tw\/partner\/%e7%be%8e%e6%84%9f%e6%96%87%e5%8c%96%e4%bc%81%e6%a5%ad\/"},{"title":"6YGU5Lq66IiH56eB5Lq657WE57mU","href":"https:\/\/aade.project.edu.tw\/partner\/%e9%81%94%e4%ba%ba%e8%88%87%e7%a7%81%e4%ba%ba%e7%b5%84%e7%b9%94\/"}]},"contact":{"title":"6IGv57Wh5oiR5YCR","check_title":"contact","href":"https:\/\/aade.project.edu.tw\/contact\/","catlist":""},"en":{"title":"RU4=","check_title":"en","href":"\/en","catlist":""},"annetimes":{"title":"VGhlIEFubmUgVGltZXM=","check_title":"annetimes","href":"\/annetimes","catlist":""}}';
+        menu = JSON.parse(menu);
+        var nav = menu;
+    </script>
+</body>
+</html>
